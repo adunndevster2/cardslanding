@@ -1,0 +1,24 @@
+@model cardslanding.Models.GamesViewModel;
+
+<div class="container">
+
+
+    <div class="columns">
+        @foreach(var game in Model.Games)
+        {
+            <div class="col-md-4">
+            <div class="feature">
+                <a href='@Model.GameURL?game=@game.Slug'>
+                    <h2>@game.Title</h2>
+                    <img src="@game.ImageURL" />
+                </a>
+                <p>
+                    @game.Description
+                </p>
+            </div>
+        </div>
+        }
+        
+    </div>
+
+</div>

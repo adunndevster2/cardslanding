@@ -1,0 +1,21 @@
+﻿@model cardslanding.Models.GamesViewModel;
+
+@{
+    ViewData["Title"] = "Cardslandings";
+}
+
+<br><br>
+
+<div class="">
+    <div class="hero" style="">
+
+        <h1>CardsLanding</h1>
+        <br>
+        <h2>A multiplayer card and board gaming platform.</h4>
+        <h3>It is currently 2% complete.</h1>
+    </div>
+</div>
+
+<br>
+<h3>Try a game...</h3>
+@Html.Partial("_GamesPartial", Model)

@@ -1,0 +1,12 @@
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/bin/Debug/netcoreapp2.0/cardslanding.deps.json
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/bin/Debug/netcoreapp2.0/cardslanding.runtimeconfig.json
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/bin/Debug/netcoreapp2.0/cardslanding.runtimeconfig.dev.json
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/bin/Debug/netcoreapp2.0/cardslanding.dll
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/bin/Debug/netcoreapp2.0/cardslanding.pdb
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/obj/Debug/netcoreapp2.0/cardslanding.csproj.CoreCompileInputs.cache
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/obj/Debug/netcoreapp2.0/cardslanding.AssemblyInfoInputs.cache
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/obj/Debug/netcoreapp2.0/cardslanding.AssemblyInfo.cs
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/obj/Debug/netcoreapp2.0/cardslanding.dll
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/obj/Debug/netcoreapp2.0/cardslanding.pdb
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/bin/Debug/netcoreapp2.0/app.db
+/Users/adamdunn/Documents/_Projects/_Fun/cardslanding/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
