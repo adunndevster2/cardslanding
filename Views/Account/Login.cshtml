@@ -11,12 +11,13 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<!-- @if(ViewData["Referrer"].ToString() == "game")
+@if(ViewData["Referrer"] != null && 
+    ViewData["Referrer"].ToString() == "game")
 {
     <div class="alert alert-warning">
         Login to start playing!
     </div>
-} -->
+}
 
 <div class="row">
     <div class="col-md-4">
