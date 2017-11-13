@@ -45,21 +45,23 @@ namespace cardslanding.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(string returnUrl = null)
+        public async Task<IActionResult> Login(string returnUrl = null, string referrer = null)
         {
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             ViewData["ReturnUrl"] = returnUrl;
+            ViewData["Referrer"] = referrer;
             return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null, string referrer = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
+            ViewData["Referrer"] = referrer;
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
@@ -68,7 +70,15 @@ namespace cardslanding.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToLocal(returnUrl);
+
+                    if(!String.IsNullOrEmpty(referrer) && referrer.ToLowerInvariant() == "game")
+                    {
+                        return Redirect(returnUrl);
+                    } else {
+                        return RedirectToLocal(returnUrl);
+                    }
+
+                    
                 }
                 if (result.RequiresTwoFactor)
                 {

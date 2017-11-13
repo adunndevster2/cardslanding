@@ -10,10 +10,18 @@
 }
 
 <h2>@ViewData["Title"]</h2>
+
+@if(ViewData["Referrer"].ToString() == "game")
+{
+    <div class="alert alert-warning">
+        Login to start playing!
+    </div>
+}
+
 <div class="row">
     <div class="col-md-4">
         <section>
-            <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+            <form asp-route-returnurl="@ViewData["ReturnUrl"]" asp-route-referrer="@ViewData["referrer"]" method="post">
                 <h4>Use a local account to log in.</h4>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>

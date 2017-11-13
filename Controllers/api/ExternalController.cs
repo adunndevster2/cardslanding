@@ -34,7 +34,9 @@ namespace cardslanding.Controllers.api
             if(User.Identity.IsAuthenticated)
             {
                 return Json(new {
-                            success = true
+                            success = true,
+                            email = User.Identity.Name,
+                            CanHost = true
                         });
             }   
             
