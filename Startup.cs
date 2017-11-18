@@ -38,7 +38,7 @@ namespace cardslanding
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
 
-                cookieDomain = "azurewebsites.net";
+                cookieDomain = "";
             }
             
             Environment = env;
