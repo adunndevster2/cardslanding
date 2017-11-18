@@ -38,7 +38,7 @@ namespace cardslanding
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
 
-                cookieDomain = "";
+                cookieDomain = "azurewebsites.net";
             }
             
             Environment = env;
@@ -77,7 +77,12 @@ namespace cardslanding
 
             //auth
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie();
+                .AddCookie()
+                .AddFacebook(facebookOptions =>
+                            {
+                                facebookOptions.AppId = Configuration["fbId"];
+                                facebookOptions.AppSecret = Configuration["fb"];
+                            });
 
             services.ConfigureApplicationCookie(options =>
             {
