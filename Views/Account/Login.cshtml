@@ -17,6 +17,16 @@
     <div class="alert alert-warning">
         Login to start playing!
     </div>
+
+    <script>
+        
+        window.onload = function() {
+            $.cookie('returnurl', '@ViewData["ReturnUrl"]', {
+                'path':'/'
+            });
+        }
+        
+    </script>
 }
 
 <div class="row">

@@ -4,6 +4,22 @@
     ViewData["Title"] = "Cardslandings";
 }
 
+<script>
+window.onload = function() {
+
+    //redirect to a game in progress if necessary...
+    var returnurl = $.cookie('returnurl');
+    $.cookie("returnurl", '', { path: '/' });
+    
+    if(returnurl != '')
+    {
+        window.location = returnurl;
+    }
+
+};
+    
+</script>
+
 <br><br>
 
 <div class="">
